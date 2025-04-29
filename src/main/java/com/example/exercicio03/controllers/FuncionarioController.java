@@ -16,7 +16,7 @@ public class FuncionarioController {
 
     private final FuncionarioService funcionarioService;
     
-    @Autowired
+   
     public FuncionarioController(FuncionarioService funcionarioService) {
         this.funcionarioService = funcionarioService;
     }

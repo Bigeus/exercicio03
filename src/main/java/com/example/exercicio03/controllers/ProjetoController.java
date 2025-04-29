@@ -24,6 +24,7 @@ public class ProjetoController {
         this.projetoService = projetoService;
     }
     
+    // Existing methods
     @PostMapping
     public ResponseEntity<Void> adicionar(@RequestBody ProjetoDTO projetoDTO) {
         projetoService.adicionar(projetoDTO);

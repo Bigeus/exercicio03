@@ -8,6 +8,8 @@ import lombok.NoArgsConstructor;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Data
 @NoArgsConstructor
@@ -22,9 +24,11 @@ public class Funcionario {
 
     @ManyToOne
     @JoinColumn(name = "setor_id")
+    @JsonIgnore
     private Setor setor;
 
     @ManyToMany(mappedBy = "funcionarios")
+    @JsonIgnore
     private List<Projeto> projetos = new ArrayList<>();
 
     public Funcionario(String nome) {
